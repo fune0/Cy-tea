@@ -11,4 +11,11 @@
 |
 */
 
+# CMS/Adminのprefixルーティング
+Route::group(['prefix' => 'admin'], function()
+{
+    Route::resource('posts', 'Admin\PostsController');
+});
+
+
 Route::get('/', 'TopController@index');
