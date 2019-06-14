@@ -8,6 +8,15 @@ use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
+    public $validateRules = [
+        'area' => 'required',
+        'lotname' => 'required',
+        'address' => 'required',
+        'fee' => 'required',
+        'totalnumbers' => 'required',
+        'text' => 'max:500',
+        'image' => 'required'
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +35,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
