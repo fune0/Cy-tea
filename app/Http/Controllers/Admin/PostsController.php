@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class PostsController extends Controller
 {
     public $validateRules = [
-        'area' => 'required',
+        'ward' => 'required',
         'lotname' => 'required',
         'address' => 'required',
         'fee' => 'required',
@@ -46,7 +46,17 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create([
+            'ward' => $request->ward,
+            'lotname' => $request->lotname,
+            'address' => $request->address,
+            'fee' => $request->fee,
+            'totalnumbers' => $request->totalnumbers,
+            'text' => $request->text,
+            'image' => $request->image
+        ]);
+           
+        return view('admin.posts.store');
     }
 
     /**
@@ -68,7 +78,7 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('admin.posts.edit');
     }
 
     /**
