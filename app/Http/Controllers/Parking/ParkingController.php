@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Parking;
 
 use App\Parking;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\post;
 
 class ParkingController extends Controller
 {
@@ -15,7 +17,9 @@ class ParkingController extends Controller
     public function index()
     {
         // 主要5区の区別駐輪場一覧ページを出す
-        
+        $parkings = Post::all();
+
+        return view('parking.index')->with('parkings', $parkings);
     }
 
     /**

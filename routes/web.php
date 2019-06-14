@@ -11,11 +11,13 @@
 |
 */
 
+Route::get('/', 'TopController@index');
+
+# Parking情報のルーティング
+Route::get('/parkings', 'Parking\ParkingController@index');
+
 # CMS/Adminのprefixルーティング
 Route::group(['prefix' => 'admin'], function()
 {
     Route::resource('posts', 'Admin\PostsController');
 });
-
-
-Route::get('/', 'TopController@index');
