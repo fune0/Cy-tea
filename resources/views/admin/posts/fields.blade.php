@@ -1,8 +1,8 @@
-<p>fields.bladeから移植してます</p>
+<p>以下、fields.bladeから移植してます</p>
+<p>管理画面の投稿機能を実装中</p>
 
 {{ Form::open(['url' => 'admin/posts', 'method' => 'post']) }}
 
-    <p>管理画面の投稿機能を実装中</p>
     <h4>情報を編集する</h4>
 
     <p>駐輪場のある区を選択してください</p>
@@ -27,6 +27,6 @@
     <p>画像を投稿してください</p>
     <input placeholder="画像のURL" type="text" name="image">
 
-    <input type="submit" value="送信">
+    <input type="submit" value="登録">
     
 {{ Form::close() }}
