@@ -14,7 +14,8 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        //
+        // 主要5区の区別駐輪場一覧ページを出す
+        
     }
 
     /**
@@ -46,7 +47,7 @@ class ParkingController extends Controller
      */
     public function show(Parking $parking)
     {
-        //
+        // indexで表示された駐輪場の詳細ページを表示する
     }
 
     /**
