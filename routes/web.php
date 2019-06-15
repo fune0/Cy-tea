@@ -14,7 +14,13 @@
 Route::get('/', 'TopController@index');
 
 # Parking情報のルーティング
-Route::get('/parkings', 'Parking\ParkingController@index');
+Route::group(['prefix' => 'parkings'], function()
+{
+    Route::get('shibuya', 'Parking\ParkingController@index');
+    Route::get('shibuya/{id}', 'Parking\ParkingController@show');
+    Route::get('shinjuku', 'Parking\ParkingController@index');
+});
+// Route::get('parkings/{parkings}', 'Parking\ParkingController@show');
 
 # CMS/Adminのprefixルーティング
 Route::group(['prefix' => 'admin'], function()

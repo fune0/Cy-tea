@@ -7,7 +7,7 @@
   <p>{{ $parking->lotname }}</p>
   <p>{{ $parking->address }}</p>
   <p>{{ $parking->totalnumbers }}</p>
-  <a href="parking/{id}" class="btn">さらに詳細</a>
+  <a href="/parkings/shibuya/{{$parking->id}}" class="btn">さらに詳細</a>
 @endforeach
 
 @section('content')

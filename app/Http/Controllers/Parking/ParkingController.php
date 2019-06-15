@@ -17,7 +17,15 @@ class ParkingController extends Controller
     public function index()
     {
         // 主要5区の区別駐輪場一覧ページを出す
-        $parkings = Post::all();
+        $url = $_SERVER['REQUEST_URI'];
+
+        if(strstr($url, '/parkings/shibuya')){
+            $parkings = Post::where('ward', "渋谷区")->orderBy('created_at', 'DESC')->paginate(5);
+
+        } elseif(strstr($url, '/parkings/shinjuku')){
+            $parkings = Post::where('ward', "新宿区")->orderBy('created_at', 'DESC')->paginate(5);
+            
+        };
 
         return view('parking.index')->with('parkings', $parkings);
     }
@@ -49,9 +57,12 @@ class ParkingController extends Controller
      * @param  \App\Parking  $parking
      * @return \Illuminate\Http\Response
      */
-    public function show(Parking $parking)
+    public function show($post)
     {
         // indexで表示された駐輪場の詳細ページを表示する
+        $parking = Post::find($post);
+
+        return view('parking.show')->with('parking', $parking);
     }
 
     /**
