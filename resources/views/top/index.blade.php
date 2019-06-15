@@ -9,11 +9,11 @@
 <p>主要都心5区のマップ</p>
 
 <a href="{{URL::to('/parkings/shibuya')}}">
-    {{Form::image('images/push.button.jpg', '渋谷区', ['class' => 'btn'])}}
+    {{Form::image('images/topshibuya.png', '渋谷区', ['class' => 'btn'])}}
 </a>
 
 <a href="{{URL::to('/parkings/shinjuku')}}">
-    {{Form::image('images/push.button.jpg', '新宿区', ['class' => 'btn'])}}
+    {{Form::image('images/topshinjuku.png', '新宿区', ['class' => 'btn'])}}
 </a>
 
 <p>検索窓</p>
