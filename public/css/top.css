@@ -1,0 +1,11 @@
+.btn-area {
+    background-color: peachpuff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    width: 196px;
+    height: 110px;
+    margin: 5px 5px;
+} 
