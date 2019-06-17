@@ -19,12 +19,26 @@ class ParkingController extends Controller
         // 主要5区の区別駐輪場一覧ページを出す
         $url = $_SERVER['REQUEST_URI'];
 
-        if(strstr($url, '/parkings/shibuya')){
-            $parkings = Post::where('ward', "渋谷区")->orderBy('created_at', 'DESC')->paginate(5);
+        if(strstr($url, '/parkings/chiyoda')){
+            $parkings = Post::where('ward', "千代田区")->orderBy('created_at', 'DESC')->paginate(5);
+
+        } elseif(strstr($url, '/parkings/chuo')){
+            $parkings = Post::where('ward', "中央区")->orderBy('created_at', 'DESC')->paginate(5);
+        
+        } elseif(strstr($url, '/parkings/minato')){
+            $parkings = Post::where('ward', "港区")->orderBy('created_at', 'DESC')->paginate(5);
 
         } elseif(strstr($url, '/parkings/shinjuku')){
             $parkings = Post::where('ward', "新宿区")->orderBy('created_at', 'DESC')->paginate(5);
-            
+        
+        } elseif(strstr($url, '/parkings/shibuya')){
+            $parkings = Post::where('ward', "渋谷区")->orderBy('created_at', 'DESC')->paginate(5);
+        
+        } elseif(strstr($url, '/parkings/shinagawa')){
+            $parkings = Post::where('ward', "品川区")->orderBy('created_at', 'DESC')->paginate(5);
+        
+        } else {
+
         };
 
         return view('parking.index')->with('parkings', $parkings);
