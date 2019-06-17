@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layout.layout')
 @section('content')
 
 <h1>詳細表示画面です</h1>
