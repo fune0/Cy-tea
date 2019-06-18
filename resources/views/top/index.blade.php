@@ -12,7 +12,11 @@
 @include('layout.header')
  
 @section('content')
-<h4>駐輪場を検索する</h4>
+<div class="image">
+    <img src="images/topcity.jpg">
+</div>
+<div class=top-main>
+    <h4>駐輪場を検索する</h4>
     <div class="btn-area">
         <a href="{{URL::to('/parkings/chiyoda')}}">{{Form::image('images/topchiyoda.png', '千代田区', ['class' => 'btn'])}}</a>
         <a href="{{URL::to('/parkings/chuo')}}">{{Form::image('images/topchuo.png', '中央区', ['class' => 'btn'])}}</a>
@@ -22,11 +26,12 @@
         <a href="{{URL::to('/parkings/shinagawa')}}">{{Form::image('images/topshinagawa.png', '品川区', ['class' => 'btn'])}}</a>
     </div>
 
-<h4>シティサイクリストにオススメな駐輪場</h4>
+    <h4>シティサイクリストにオススメ！駐輪場</h4>
     <div class="spot-area">
         <div class="card">
         </div>
     </div>
+</div>
 
 @endsection
  
@@ -34,10 +39,6 @@
  
 @section('pageSub')
     <p>個別サイドバーの内容</p>
-@endsection
- 
-@section('pageJs')
-<script src="/js/page.js"></script>
 @endsection
  
 @include('layout.footer')

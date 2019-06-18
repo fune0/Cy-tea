@@ -1,3 +1,12 @@
+.image {
+    text-align: center;
+}
+
+.top-main {
+    background-color: white;
+    border: 2px solid gray; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px #fce2c4 inset;/* 影の色 */
+}
 .btn-area {
     background-color: peachpuff;
     margin: 0 auto;

@@ -5,8 +5,8 @@
 </head>
 <body>
 @yield('header')
-<div class="contents">
-    <div class="main" id="wrap">
+<div class="contents clearfix">
+    <div class="main">
         @yield('content')
     </div>
     <div class="sub">
