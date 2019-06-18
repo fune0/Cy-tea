@@ -1,0 +1,9 @@
+.card-area {
+    background-color: peachpuff;
+    width: 680px;
+    margin: 0 auto;
+}
+.card {
+    background-color: gainsboro;
+    width: 680px;
+}
