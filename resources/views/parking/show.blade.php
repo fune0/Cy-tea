@@ -4,7 +4,30 @@
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
 @section('pageCss')
+<link rel="stylesheet" href="../dist/css/swiper.min.css">
 <link rel="stylesheet" href="/css/index.css">
+<style>
+        html, body {
+          position: relative;
+          height: 100%;
+        }
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color:#000;
+          margin: 0;
+          padding: 0;
+        }
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+        }
+      </style>
 @endsection
  
 @include('layout.head')

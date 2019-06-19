@@ -3,7 +3,28 @@
     width: 680px;
     margin: 0 auto;
 }
+
+article {
+	display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px #999;
+}
+
+.thumbnail {
+    padding-right: 20px; 
+    width: 180px;
+    height: 135px;
+}
+
 .card {
     background-color: gainsboro;
     width: 680px;
+}
+
+.card-txt {
+
 }
