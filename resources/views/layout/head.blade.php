@@ -5,6 +5,5 @@
 <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
 <link rel="stylesheet" href="/css/normalize.css">
 <link rel="stylesheet" href="/css/layout.css">
-<script src="{{ assets('js/app.js') }}"></script>
 @yield('pageCss')
 @endsection
