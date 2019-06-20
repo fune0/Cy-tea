@@ -1,18 +1,36 @@
+.top-area {
+    background-color: #ffffff;
+    width: 680px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
 .image {
+    width: 565px;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
     text-align: center;
+}
+
+.top-txt {
+    margin-left: 10px;
 }
 
 .top-main {
-    background-color: white;
+    background-color: #ffffff;
+    margin-top: 10px;
     border: 2px solid gray; /* 枠線の太さ・色 */
-    box-shadow: 0 0 5px 2px #fce2c4 inset;/* 影の色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
 }
 .btn-area {
-    background-color: peachpuff;
+    background-color: #ffffff;
     margin: 0 auto;
     text-align: center;
+    margin: 5px 5px;
 }
-
 .btn {
     width: 196px;
     height: 110px;
