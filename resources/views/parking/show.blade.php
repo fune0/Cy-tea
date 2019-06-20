@@ -4,7 +4,7 @@
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
 @section('pageCss')
-<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/show.css">
 @endsection
  
 @include('layout.head')
@@ -13,12 +13,15 @@
 
 @section('content')
 
+<div class="show-area">
+    <img  class="slide-image" src="{{ $parking->image }}">
     <p>{{ $parking->ward }}</p>
     <p>{{ $parking->lotname }}</p>
     <p>{{ $parking->address }}</p>
     <p>{{ $parking->fee }}</p>
     <p>{{ $parking->totalnumbers }}</p>
     <p>{{ $parking->text }}</p>
+</div>
 
 @endsection
 
