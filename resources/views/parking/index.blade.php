@@ -14,6 +14,7 @@
 @section('content')
 
 <div class=card-area>
+  <h4 class="index-txt">{{ $ward }}にある駐輪場一覧</h4>
   
     @foreach($parkings as $parking)
     <article>

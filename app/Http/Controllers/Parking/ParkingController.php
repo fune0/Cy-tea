@@ -20,28 +20,34 @@ class ParkingController extends Controller
         $url = $_SERVER['REQUEST_URI'];
 
         if(strstr($url, '/parkings/chiyoda')){
+            $ward = "千代田区";
             $parkings = Post::where('ward', "chiyoda")->orderBy('created_at', 'DESC')->paginate(5);
 
         } elseif(strstr($url, '/parkings/chuo')){
+            $ward = "中央区";
             $parkings = Post::where('ward', "chuo")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/minato')){
+            $ward = "港区";
             $parkings = Post::where('ward', "minato")->orderBy('created_at', 'DESC')->paginate(5);
 
         } elseif(strstr($url, '/parkings/shinjuku')){
+            $ward = "新宿区";
             $parkings = Post::where('ward', "shinjuku")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/shibuya')){
+            $ward = "渋谷区";
             $parkings = Post::where('ward', "shibuya")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/shinagawa')){
+            $ward = "品川区";
             $parkings = Post::where('ward', "shinagawa")->orderBy('created_at', 'DESC')->paginate(5);
         
         } else {
             // 404エラーを返す
         };
 
-        return view('parking.index')->with('parkings', $parkings);
+        return view('parking.index')->with('ward', $ward)->with('parkings', $parkings);
     }
 
     /**
