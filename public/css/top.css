@@ -1,20 +1,77 @@
+.top-area {
+    background-color: #ffffff;
+    width: 680px;
+    margin: 0 auto;
+}
+
+.top-slider {
+    background-color: #ffffff;
+    border: 2px solid gray; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
+    padding: 10px 0;
+}
+
 .image {
+    width: 565px;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
     text-align: center;
+}
+
+.top-txt {
+    margin-left: 10px;
+    text-align: left;
 }
 
 .top-main {
-    background-color: white;
+    background-color: #ffffff;
+    margin-top: 10px;
     border: 2px solid gray; /* 枠線の太さ・色 */
-    box-shadow: 0 0 5px 2px #fce2c4 inset;/* 影の色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
 }
 .btn-area {
-    background-color: peachpuff;
+    background-color: #ffffff;
     margin: 0 auto;
     text-align: center;
+    margin: 5px 5px;
 }
-
 .btn {
     width: 196px;
     height: 110px;
     margin: 5px 5px;
+	box-sizing: border-box;
+    box-shadow: 0 0 5px #999;
 } 
+
+.spot-area {
+    background-color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    margin: 5px 5px;
+}
+
+article {
+    display: inline-block;
+    background-color: #ffffff;
+    width: 216px;
+    height: 360px;
+    margin: 0.5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+    box-shadow: 0 0 5px #999;
+}
+figure {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 180px;
+    height: 135px;
+}

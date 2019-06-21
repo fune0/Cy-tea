@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Parking;
 use App\Parking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\post;
+use App\Post;
 
 class ParkingController extends Controller
 {
@@ -20,25 +20,25 @@ class ParkingController extends Controller
         $url = $_SERVER['REQUEST_URI'];
 
         if(strstr($url, '/parkings/chiyoda')){
-            $parkings = Post::where('ward', "千代田区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "chiyoda")->orderBy('created_at', 'DESC')->paginate(5);
 
         } elseif(strstr($url, '/parkings/chuo')){
-            $parkings = Post::where('ward', "中央区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "chuo")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/minato')){
-            $parkings = Post::where('ward', "港区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "minato")->orderBy('created_at', 'DESC')->paginate(5);
 
         } elseif(strstr($url, '/parkings/shinjuku')){
-            $parkings = Post::where('ward', "新宿区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "shinjuku")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/shibuya')){
-            $parkings = Post::where('ward', "渋谷区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "shibuya")->orderBy('created_at', 'DESC')->paginate(5);
         
         } elseif(strstr($url, '/parkings/shinagawa')){
-            $parkings = Post::where('ward', "品川区")->orderBy('created_at', 'DESC')->paginate(5);
+            $parkings = Post::where('ward', "shinagawa")->orderBy('created_at', 'DESC')->paginate(5);
         
         } else {
-
+            // 404エラーを返す
         };
 
         return view('parking.index')->with('parkings', $parkings);
