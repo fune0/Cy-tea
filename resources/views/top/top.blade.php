@@ -55,7 +55,7 @@
                             <p>収容台数：{{ $reccomend->totalnumbers }}</p>
                             
                             <div class="btn">
-                            <a href="{{url()->current()}}/{{$reccomend->id}}">さらに詳細</a>
+                            <a href="parkings/{{$reccomend->ward}}/{{$reccomend->id}}">さらに詳細</a>
                             </div>
                         </div>
                     

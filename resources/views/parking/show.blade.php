@@ -30,7 +30,6 @@
     
     </div>
     <div class="show-txt">
-        <p>{{ $parking->ward }}</p>
         <p>{{ $parking->lotname }}</p>
         <p>{{ $parking->address }}</p>
         <p>{{ $parking->fee }}</p>

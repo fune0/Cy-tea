@@ -26,7 +26,7 @@
         <p>収容台数：{{ $parking->totalnumbers }}</p>
         
         <div class="btn">
-          <a href="{{url()->current()}}/{{$parking->id}}">さらに詳細</a>
+          <a href="{{$parking->ward}}/{{$parking->id}}">さらに詳細</a>
         </div>
       </div>
     
