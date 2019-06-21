@@ -43,6 +43,24 @@
         <h4 class="top-txt">シティサイクリストにオススメ！駐輪場</h4>
         <div class="spot-area">
             <div class="card">
+                @foreach($reccomended as $reccomend)
+                    <article>
+
+                        <figure>
+                            <img  class="thumbnail" src="{{ $reccomend->image }}">
+                        </figure>
+                        <div class="card-txt">
+                            <h3>{{ $reccomend->lotname }}</h3>
+                            <p>住所：{{ $reccomend->address }}</p>
+                            <p>収容台数：{{ $reccomend->totalnumbers }}</p>
+                            
+                            <div class="btn">
+                            <a href="{{url()->current()}}/{{$reccomend->id}}">さらに詳細</a>
+                            </div>
+                        </div>
+                    
+                    </article>
+                @endforeach
             </div>
         </div>
     </div>

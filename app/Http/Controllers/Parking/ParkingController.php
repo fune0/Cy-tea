@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Parking;
 use App\Parking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\post;
+use App\Post;
 
 class ParkingController extends Controller
 {
@@ -38,7 +38,7 @@ class ParkingController extends Controller
             $parkings = Post::where('ward', "品川区")->orderBy('created_at', 'DESC')->paginate(5);
         
         } else {
-
+            // 404エラーを返す
         };
 
         return view('parking.index')->with('parkings', $parkings);
