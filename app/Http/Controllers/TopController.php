@@ -14,7 +14,7 @@ class TopController extends Controller
     {
         $parkings = Post::all();
 
-        $reccomend = $parkings->find([1,2,3,4,5,6])->random(5); // idを指定したものからランダムで5つ表示する
+        $reccomend = $parkings->find([1,2,3,4,5,6])->random(3); // idを指定したものからランダムで3つ表示する
 
         View::share('reccomended', $reccomend);
     }

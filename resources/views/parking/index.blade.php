@@ -22,7 +22,7 @@
       </figure>
       <div class="card-txt">
         <h3>{{ $parking->lotname }}</h3>
-        <p>住所：{{ $parking->address }}</p>
+        <p>{{ $parking->address }}</p>
         <p>収容台数：{{ $parking->totalnumbers }}</p>
         
         <div class="btn">
