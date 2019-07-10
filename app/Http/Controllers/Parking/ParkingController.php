@@ -16,7 +16,7 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        // 主要5区の区別駐輪場一覧ページを出す
+        // 主要6区の区別駐輪場一覧ページを出す
         $url = $_SERVER['REQUEST_URI'];
 
         if(strstr($url, '/parkings/chiyoda')){
@@ -82,7 +82,31 @@ class ParkingController extends Controller
         // indexで表示された駐輪場の詳細ページを表示する
         $parking = Post::find($post);
 
-        return view('parking.show')->with('parking', $parking);
+        $url = url()->current();
+
+        if(strstr($url, '/parkings/chiyoda')){
+            $ward = "千代田区";
+
+        } elseif(strstr($url, '/parkings/chuo')){
+            $ward = "中央区";
+        
+        } elseif(strstr($url, '/parkings/minato')){
+            $ward = "港区";
+
+        } elseif(strstr($url, '/parkings/shinjuku')){
+            $ward = "新宿区";
+        
+        } elseif(strstr($url, '/parkings/shibuya')){
+            $ward = "渋谷区";
+            
+        } elseif(strstr($url, '/parkings/shinagawa')){
+            $ward = "品川区";
+        
+        } else {
+            // 404エラーを返す
+        };
+
+        return view('parking.show')->with('ward', $ward)->with('parking', $parking);
     }
 
     /**
