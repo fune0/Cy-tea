@@ -16,7 +16,9 @@
 @include('layout.header')
 
 @section('content')
-
+<div class="list">
+    {{ Breadcrumbs::render('showParking', $ward, $parking) }}
+</div>
 <div class="show-area">
     <h1 class="name-txt">{{ $parking->lotname }}</h1>
     <div class="show-slider">

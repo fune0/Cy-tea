@@ -16,6 +16,10 @@
 
 @section('content')
 
+<div class="list">
+    {{ Breadcrumbs::render('ward', $ward) }}
+</div>
+
 <div class=card-area>
   <h1 class="index-txt">{{ $ward }}にある駐輪場一覧</h1>
   <div class=index-main>  

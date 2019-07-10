@@ -13,7 +13,6 @@
 @include('layout.header')
  
 @section('content')
-
 <div class="top-area">
     <div class="top-slider">
         <!-- Slider main container -->
