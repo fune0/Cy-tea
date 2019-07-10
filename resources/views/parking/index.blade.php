@@ -42,6 +42,10 @@
       </article>
       @endforeach
 
+      <div class="pagination">
+        {{ $parkings->links() }}
+      </div>
+      
   </div>
 </div>
 

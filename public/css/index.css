@@ -31,3 +31,13 @@ article {
     width: 180px;
     height: 135px;
 }
+
+.pagination {
+    margin-left: -16px;
+    text-align: center;
+}
+.pagination li {
+    display: inline; /*横に並ぶように*/
+    list-style: none;
+    font-weight: bold;
+}
