@@ -1,17 +1,29 @@
+.index-txt {
+    margin-left: 10px;
+}
+
 .card-area {
     background-color: #ffffff;
     width: 680px;
     margin: 0 auto;
 }
 
+.index-main {
+    background-color: #ffffff;
+    border: 2px solid gray; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
+    padding: 10px 0;
+}
+
 article {
 	display: flex;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    margin: 0.5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 	padding: 10px;
 	border-radius: 5px;
 	box-sizing: border-box;
-	box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #999;
 }
 
 .thumbnail {
