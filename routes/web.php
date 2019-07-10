@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TopController@index');
+    Route::get('/', 'TopController@index');
 
 # Parking情報のルーティング
 Route::group(['prefix' => 'parkings'], function()

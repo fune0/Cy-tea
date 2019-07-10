@@ -1,6 +1,6 @@
 @extends('layout.layout')
  
-@section('title', 'サイティー')
+@section('title', '自転車を駐めて紅茶を楽しもう')
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
 @section('pageCss')
@@ -34,7 +34,7 @@
     <div class="top-main">
         <div class="btn-area">
         
-            <h4 class="top-txt">駐輪場を検索する</h4>
+            <h2 class="top-txt">駐輪場を検索する</h2>
         
             <a href="{{URL::to('/parkings/chiyoda')}}">{{Form::image('images/topchiyoda.png', '千代田区', ['class' => 'btn'])}}</a>
             <a href="{{URL::to('/parkings/chuo')}}">{{Form::image('images/topchuo.png', '中央区', ['class' => 'btn'])}}</a>
@@ -46,7 +46,7 @@
 
         <div class="spot-area">
 
-            <h4 class="top-txt">シティサイクリストにオススメ！駐輪場</h4>
+            <h2 class="top-txt">シティサイクリストにオススメ！駐輪場</h2>
 
             <div class="card">
 

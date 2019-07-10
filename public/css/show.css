@@ -1,8 +1,18 @@
 .show-area {
-    background-color: peachpuff;
+    background-color: #ffffff;
     width: 680px;
     margin: 0 auto;
-    padding-top: 10px;
+}
+
+.name-txt {
+    margin-left: 10px;
+}
+
+.show-slider {
+    background-color: #ffffff;
+    border: 2px solid gray; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
+    padding: 10px 0;
 }
 
 .slide-image {
@@ -13,4 +23,22 @@
     width: 600px;
     height: 300px;
     text-align: center;
+}
+
+.show-main {
+    background-color: #ffffff;
+    margin-top: 10px;
+    border: 2px solid gray; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
+}
+
+.show-txt {
+    margin-left: 10px;
+    text-align: left;
+}
+
+#map { height: 100%; width: 100%}
+
+.map-txt {
+    margin-left: 10px;
 }
