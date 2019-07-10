@@ -81,7 +81,7 @@
     })
     </script>
 
-    <script src=""></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWy1hjcFApkPfZIC8osxje7Crkvw578DY"></script>
 
     <script>
     var MyLatLng = new google.maps.LatLng(35.6811673, 139.7670516);
