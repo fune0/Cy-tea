@@ -16,9 +16,11 @@
 @include('layout.header')
 
 @section('content')
-<div class="list">
+
+<div class="breadcrumbs">
     {{ Breadcrumbs::render('showParking', $ward, $parking) }}
 </div>
+
 <div class="show-area">
     <h1 class="name-txt">{{ $parking->lotname }}</h1>
     <div class="show-slider">
@@ -52,6 +54,10 @@
         <h2 class="map-txt">{{ $parking->lotname }} 周辺MAP</h2>
         <div id="map"></div>
     </div>
+</div>
+
+<div class="breadcrumbs">
+    {{ Breadcrumbs::render('showParking', $ward, $parking) }}
 </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>

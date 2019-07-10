@@ -16,7 +16,7 @@
 
 @section('content')
 
-<div class="list">
+<div class="breadcrumbs">
     {{ Breadcrumbs::render('ward', $ward) }}
 </div>
 
@@ -43,6 +43,10 @@
       @endforeach
 
   </div>
+</div>
+
+<div class="breadcrumbs">
+    {{ Breadcrumbs::render('ward', $ward) }}
 </div>
 
 @endsection

@@ -9,3 +9,35 @@
         @endforeach
     </ul>
 @endif
+
+<style>
+.breadcrumb {
+  padding-left: 10px;
+  margin-left: 0;
+}
+
+.breadcrumb li{
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after {/* >を表示*/
+  content: '>';
+  padding: 0 3px;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+</style>
