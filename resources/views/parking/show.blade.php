@@ -95,7 +95,6 @@
     // markerを定義
     var marker;
     
-    
     //geocoder.geocode() にアドレスを渡して、コールバック関数を記述して処理
     geocoder.geocode({ address: address }, function(results, status){
     //ステータスが OK で results[0] が存在すれば、地図を生成

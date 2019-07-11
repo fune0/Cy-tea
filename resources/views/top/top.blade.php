@@ -38,9 +38,23 @@
             <a href="{{URL::to('/parkings/chiyoda')}}">{{Form::image('images/topchiyoda.png', '千代田区', ['class' => 'btn'])}}</a>
             <a href="{{URL::to('/parkings/chuo')}}">{{Form::image('images/topchuo.png', '中央区', ['class' => 'btn'])}}</a>
             <a href="{{URL::to('/parkings/minato')}}">{{Form::image('images/topminato.png', '港区', ['class' => 'btn'])}}</a>
+            
+            <div class="wardName">
+                <h3>千代田区</h3>
+            
+                <h3>中央区</h3>
+            
+                <h3>港区</h3>
+            </div>
+            
             <a href="{{URL::to('/parkings/shinjuku')}}">{{Form::image('images/topshinjuku.png', '新宿区', ['class' => 'btn'])}}</a>
             <a href="{{URL::to('/parkings/shibuya')}}">{{Form::image('images/topshibuya.png', '渋谷区', ['class' => 'btn'])}}</a>
             <a href="{{URL::to('/parkings/shinagawa')}}">{{Form::image('images/topshinagawa.png', '品川区', ['class' => 'btn'])}}</a>
+            <div class="wardName">
+                <h3>新宿区</h3>
+                <h3>渋谷区</h3>
+                <h3>品川区</h3>
+            </div>
         </div>
 
         <div class="spot-area">
@@ -57,7 +71,9 @@
                         <img  class="thumbnail" src="{{ $reccomend->image }}">
                     </figure>
                     <div class="card-txt">
+                        <div class="lotname-txt">
                         <h3>{{ $reccomend->lotname }}</h3>
+                        </div>
                         <p>{{ $reccomend->address }}</p>
                         <p>収容台数：{{ $reccomend->totalnumbers }}</p>
                     </div>
