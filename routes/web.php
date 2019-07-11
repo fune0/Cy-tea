@@ -11,14 +11,14 @@
 |
 */
 
-    Route::get('/', 'TopController@index')->name('home');
+    Route::get('/', 'TopController@index');
 
 # Parking情報のルーティング
 Route::group(['prefix' => 'parkings'], function()
 {
     #区別一覧ページ
     // Route::get('{ward}', 'Parking\ParkingController@index')->name('ward');
-    Route::get('chiyoda', 'Parking\ParkingController@index')->name('ward');
+    Route::get('chiyoda', 'Parking\ParkingController@index');
     Route::get('chuo', 'Parking\ParkingController@index');
     Route::get('minato', 'Parking\ParkingController@index');
     Route::get('shinjuku', 'Parking\ParkingController@index');
@@ -26,7 +26,7 @@ Route::group(['prefix' => 'parkings'], function()
     Route::get('shinagawa', 'Parking\ParkingController@index');
     
     #区別一覧ページ->詳細ページ
-    Route::get('chiyoda/{id}', 'Parking\ParkingController@show')->name('showParking');
+    Route::get('chiyoda/{id}', 'Parking\ParkingController@show');
     Route::get('chuo/{id}', 'Parking\ParkingController@show');
     Route::get('minato/{id}', 'Parking\ParkingController@show');
     Route::get('shinjuku/{id}', 'Parking\ParkingController@show');

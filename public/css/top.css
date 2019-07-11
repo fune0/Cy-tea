@@ -26,6 +26,13 @@
     text-align: left;
 }
 
+.wardName h3 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 196px;
+    margin: 1px 5px;
+}
+
 .top-main {
     background-color: #ffffff;
     margin-top: 10px;
@@ -74,4 +81,10 @@ figure {
 .thumbnail {
     width: 180px;
     height: 135px;
+}
+
+.lotname-txt {
+    vertical-align: middle;
+    height: 30px;
+    padding-bottom: 20px;
 }

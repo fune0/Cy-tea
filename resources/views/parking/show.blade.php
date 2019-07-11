@@ -89,17 +89,24 @@
     //HTMLに記載されている住所の取得
     var address = document.getElementById('address').textContent; 
     //ジオコーディングのインスタンスの生成
-    var geocoder = new google.maps.Geocoder(); 
+    var geocoder = new google.maps.Geocoder();
+    // mapを定義
+    var map;
+    // markerを定義
+    var marker;
     
     //geocoder.geocode() にアドレスを渡して、コールバック関数を記述して処理
     geocoder.geocode({ address: address }, function(results, status){
     //ステータスが OK で results[0] が存在すれば、地図を生成
         if (status === 'OK' && results[0]){  
-            new google.maps.Map(target, {
+            map = new google.maps.Map(target, {
             //results[0].geometry.location に緯度・経度のオブジェクトが入っている
             center: results[0].geometry.location,
             zoom: 15
-
+            });
+            marker = new google.maps.Marker({  // マーカーの追加
+                position: results[0].geometry.location, // マーカーを立てる位置を指定
+                map: map // マーカーを立てる地図を指定
             });
         }else{ 
         //ステータスが OK 以外の場合や results[0] が存在しなければ、アラートを表示して処理を中断
