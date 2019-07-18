@@ -1,6 +1,6 @@
 @extends('layout.layout')
  
-@section('title', '自転車を駐めて紅茶を楽しもう')
+@section('title', '愛車をとめて、ほっとひと息')
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
 @section('pageCss')
@@ -14,9 +14,10 @@
  
 @section('content')
 <div class="top-area">
-    <div class="top-slider">
+    <div class="top-content">
+        <div class="main-image"><img class="image" src="images/mainimage.jpg"></div>
         <!-- Slider main container -->
-        <div class="swiper-container">
+        {{-- <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img class="image" src="images/topcity.jpg"></div>
                 <div class="swiper-slide"><img class="image" src="images/toptrip.jpg"></div>
@@ -27,7 +28,7 @@
             <div class="swiper-button-next"></div>
 
             <div class="swiper-pagination"></div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="top-main">
@@ -117,7 +118,9 @@
 @include('layout.sub')
  
 @section('pageSub')
-    <p>個別サイドバーの内容</p>
+<div class="banner-area">
+    <a href="{{URL::to('')}}">{{Form::image('images/googleaddsense.png', '広告枠', ['class' => 'banner'])}}</a>
+</div>
 @endsection
  
 @include('layout.footer')

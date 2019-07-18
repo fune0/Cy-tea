@@ -1,3 +1,16 @@
+h1,h2,h3,p {
+    color: #2F4F4F;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+a {
+    text-decoration: none;
+    color: #0072bc;
+}
+a:hover {
+    text-decoration: underline;
+}
+
 .index-txt {
     margin-left: 10px;
 }
@@ -8,11 +21,15 @@
     margin: 0 auto;
 }
 
+.btn {
+    margin-left: 240px; 
+}
+
 .index-main {
     background-color: #ffffff;
-    border: 2px solid gray; /* 枠線の太さ・色 */
-    box-shadow: 0 0 5px 2px rgb(163, 163, 163) inset;/* 影の色 */
-    padding: 10px 0;
+    border: 2px solid #FF7F50; /* 枠線の太さ・色 */
+    box-shadow: 0 0 5px 2px #C2863C inset;/* 影の色 */
+    padding: 0;
 }
 
 article {
@@ -40,4 +57,6 @@ article {
     display: inline; /*横に並ぶように*/
     list-style: none;
     font-weight: bold;
+    text-decoration: none;
+    color: #0072bc;
 }

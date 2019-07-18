@@ -17,6 +17,7 @@
 }
 
 .breadcrumb li{
+  color: #2F4F4F;
   display: inline;/*横に並ぶように*/
   list-style: none;
   font-weight: bold;/*太字*/
