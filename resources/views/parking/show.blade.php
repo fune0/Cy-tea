@@ -123,7 +123,7 @@
 @include('layout.sub')
  
 @section('pageSub')
-    <p>個別サイドバーの内容</p>
+
 @endsection
  
 @include('layout.footer')
